@@ -1,4 +1,4 @@
-import { Session, User } from "@supabase/supabase-js";
+import { Session } from "@supabase/supabase-js";
 import { useRouter, useSegments, SplashScreen } from "expo-router";
 import { createContext, useContext, useEffect, useState } from "react";
 
@@ -6,6 +6,13 @@ import { supabase } from "@/config/supabase";
 import { getUserDetailsById } from "@/actions/users";
 
 SplashScreen.preventAutoHideAsync();
+
+interface User{
+	id: string;
+	name?: string;
+	email: string;
+	phoneNumber:string;
+}
 
 type AuthContextProps = {
 	user: User | null;
