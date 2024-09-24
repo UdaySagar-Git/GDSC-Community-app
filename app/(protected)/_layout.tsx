@@ -61,9 +61,9 @@ export default function ProtectedLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name="forum"
+				name="forums"
 				options={{
-					title: "Forum",
+					title: "Forums",
 					tabBarIcon: ({ color, size }) => (
 						<Ionicons name="chatbubbles" size={size} color={color} />
 					),
@@ -94,6 +94,14 @@ export default function ProtectedLayout() {
 			<Tabs.Screen name="events/[id]" options={{
 				href: null,
 				headerTitle: "Event Details",
+			}} />
+			<Tabs.Screen name="forum/new" options={{
+				href: null,
+				headerTitle: "New Forum",
+			}} />
+			<Tabs.Screen name="forums/[id]" options={{
+				href: null,
+				headerTitle: "Forum Details",
 			}} />
 		</Tabs>
 	);
