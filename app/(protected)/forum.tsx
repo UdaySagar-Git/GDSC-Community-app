@@ -11,7 +11,6 @@ const topics = [
 export default function Forum() {
   return (
     <View className="flex-1 bg-background p-4">
-      <H1 className="mb-4">Discussion Forum</H1>
       <FlatList
         data={topics}
         keyExtractor={(item) => item.id}

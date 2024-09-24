@@ -23,18 +23,16 @@ export interface Event {
 //   return data.payload.reverse();
 // };
 
-
-
 export const getUpcomingEvents = async () => {
-
+  const today = new Date().toISOString();
   const { data, error } = await supabase
-    .from('events')
-    .select('*')
-    .order('startDate', { ascending: true });
+    .from("events")
+    .select("*")
+    .or(`startDate.is.null,startDate.gt.${today}`)
+    .order("startDate", { ascending: true });
 
   if (error) {
-    console.error('Error fetching upcoming events:', error);
-
+    console.error("Error fetching upcoming events:", error);
     return [];
   }
 
@@ -42,13 +40,15 @@ export const getUpcomingEvents = async () => {
 };
 
 export const getPastEvents = async () => {
+  const today = new Date().toISOString();
   const { data, error } = await supabase
-    .from('events')
-    .select('*')
-    .order('startDate', { ascending: false });
+    .from("events")
+    .select("*")
+    .or(`endDate.lt.${today}`)
+    .order("startDate", { ascending: false });
 
   if (error) {
-    console.error('Error fetching past events:', error);
+    console.error("Error fetching past events:", error);
     return [];
   }
 

@@ -11,7 +11,6 @@ const notifications = [
 export default function Notifications() {
   return (
     <View className="flex-1 bg-background p-4">
-      <H1 className="mb-4">Notifications</H1>
       <FlatList
         data={notifications}
         keyExtractor={(item) => item.id}

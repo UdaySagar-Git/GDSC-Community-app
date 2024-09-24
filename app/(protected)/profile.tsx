@@ -9,7 +9,6 @@ export default function Profile() {
 
 	return (
 		<View className="flex-1 bg-background p-4">
-			<H1 className="mb-4">My Profile</H1>
 			<Image
 				source={require("@/assets/images/empty_avatar.jpg")}
 				className="w-32 h-32 rounded-full mb-4 self-center"

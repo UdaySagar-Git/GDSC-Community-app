@@ -11,7 +11,6 @@ const resources = [
 export default function Resources() {
   return (
     <View className="flex-1 bg-background p-4">
-      <H1 className="mb-4">Learning Resources</H1>
       <FlatList
         data={resources}
         keyExtractor={(item) => item.id}
