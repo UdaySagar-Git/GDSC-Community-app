@@ -42,11 +42,47 @@ export default function ProtectedLayout() {
 				}}
 			/>
 			<Tabs.Screen
+				name="events"
+				options={{
+					title: "Events",
+					tabBarIcon: ({ color, size }) => (
+						<Ionicons name="calendar" size={size} color={color} />
+					),
+				}}
+			/>
+			<Tabs.Screen
+				name="forum"
+				options={{
+					title: "Forum",
+					tabBarIcon: ({ color, size }) => (
+						<Ionicons name="chatbubbles" size={size} color={color} />
+					),
+				}}
+			/>
+			<Tabs.Screen
+				name="resources"
+				options={{
+					title: "Resources",
+					tabBarIcon: ({ color, size }) => (
+						<Ionicons name="book" size={size} color={color} />
+					),
+				}}
+			/>
+			<Tabs.Screen
+				name="notifications"
+				options={{
+					title: "Notifications",
+					tabBarIcon: ({ color, size }) => (
+						<Ionicons name="notifications" size={size} color={color} />
+					),
+				}}
+			/>
+			<Tabs.Screen
 				name="profile"
 				options={{
-					title: "profile",
+					title: "Profile",
 					tabBarIcon: ({ color, size }) => (
-						<Ionicons name="person-sharp" size={size} color={color} />
+						<Ionicons name="person" size={size} color={color} />
 					),
 				}}
 			/>
