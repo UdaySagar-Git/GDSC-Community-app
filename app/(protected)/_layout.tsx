@@ -1,6 +1,6 @@
 import React from "react";
-import { Tabs } from "expo-router";
-import { View } from "react-native";
+import { Tabs, useRouter } from "expo-router";
+import { View, TouchableOpacity, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { ThemeSwitch } from "@/components/ui/theme-switch";
 import { theme } from "@/lib/constants";
@@ -8,6 +8,8 @@ import { useColorScheme } from "@/lib/useColorScheme";
 
 export default function ProtectedLayout() {
 	const { colorScheme } = useColorScheme();
+	const router = useRouter();
+
 	const backgroundColor = colorScheme === "dark" ? theme.dark.background : theme.light.background;
 	const foregroundColor = colorScheme === "dark" ? theme.dark.foreground : theme.light.foreground;
 
@@ -18,18 +20,26 @@ export default function ProtectedLayout() {
 					backgroundColor,
 				},
 				headerTintColor: foregroundColor,
+				headerLeft: () => (
+					<TouchableOpacity onPress={() => router.push("/home")}>
+						<Image
+							source={require("@/assets/images/gdsc-logo.gif")}
+							style={{ width: 50, height: 40, marginLeft: 15 }}
+						/>
+					</TouchableOpacity>
+				),
 				headerRight: () => (
-					<View style={{ marginRight: 15 }}>
+					<View style={{ flexDirection: "row", alignItems: "center", marginRight: 15 }}>
+						<TouchableOpacity onPress={() => router.push("/notifications")} style={{ marginRight: 15 }}>
+							<Ionicons name="notifications" size={24} color={foregroundColor} />
+						</TouchableOpacity>
 						<ThemeSwitch />
 					</View>
 				),
 				tabBarStyle: {
 					backgroundColor,
 				},
-				tabBarActiveTintColor:
-					colorScheme === "dark"
-						? theme.dark.primary
-						: theme.light.primary,
+				tabBarActiveTintColor: colorScheme === "dark" ? theme.dark.primary : theme.light.primary,
 			}}
 		>
 			<Tabs.Screen
@@ -69,15 +79,6 @@ export default function ProtectedLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name="notifications"
-				options={{
-					title: "Notifications",
-					tabBarIcon: ({ color, size }) => (
-						<Ionicons name="notifications" size={size} color={color} />
-					),
-				}}
-			/>
-			<Tabs.Screen
 				name="profile"
 				options={{
 					title: "Profile",
@@ -86,6 +87,14 @@ export default function ProtectedLayout() {
 					),
 				}}
 			/>
+			<Tabs.Screen name="notifications" options={{
+				href: null,
+				headerTitle: "Notifications",
+			}} />
+			<Tabs.Screen name="events/[id]" options={{
+				href: null,
+				headerTitle: "Event Details",
+			}} />
 		</Tabs>
 	);
 }
