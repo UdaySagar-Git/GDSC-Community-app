@@ -38,13 +38,9 @@ export default function Forums() {
           </TouchableOpacity>
         )}
       />
-      <Button
-        size="lg"
-        onPress={() => router.push("/forum/new")}
-        className="mt-4 flex flex-row items-center justify-center"
-      >
-        <AntDesign name="plus" size={24} color="white" className="mr-2" />
-        <Text className="text-white font-semibold">Start a New Forum</Text>
+      <Button onPress={() => router.push("/forum/new")}>
+        {/* <AntDesign name="plus" size={24} color="white" className="mr-2" /> */}
+        <Text className="text-white">Start a New Forum</Text>
       </Button>
     </View>
   );

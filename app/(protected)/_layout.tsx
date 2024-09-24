@@ -107,6 +107,14 @@ export default function ProtectedLayout() {
 				href: null,
 				headerTitle: "Details"
 			}} />
+			<Tabs.Screen name="new-resource" options={{
+				href: null,
+				headerTitle: "New Resource"
+			}} />
+			<Tabs.Screen name="resources/[id]" options={{
+				href: null,
+				headerTitle: "Resource Details"
+			}} />
 		</Tabs>
 	);
 }

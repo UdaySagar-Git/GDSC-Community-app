@@ -2,10 +2,13 @@ import { supabase } from "@/config/supabase";
 
 export interface User {
 	id: string;
+	username?: string;
 	name?: string;
 	email: string;
-	phoneNumber: string;
+	phoneNumber?: string;
   image?: string;
+  created_at: string;
+  role: "ADMIN" | "USER";
 }
 
 export const getCurrentUser = async () => {
