@@ -36,14 +36,14 @@ export default function Events() {
           variant={showUpcoming ? "secondary" : "outline"}
           onPress={() => setShowUpcoming(true)}
         >
-          <Text>Upcoming Events</Text>
+          <Text className={showUpcoming ? "text-black font-semibold" : "text-gray-500"}>Upcoming Events</Text>
         </Button>
         <Button
           className="w-1/2"
           variant={!showUpcoming ? "secondary" : "outline"}
           onPress={() => setShowUpcoming(false)}
         >
-          <Text>Past Events</Text>
+          <Text className={!showUpcoming ? "text-black font-semibold" : "text-gray-500"}>Past Events</Text>
         </Button>
       </View>
       {
