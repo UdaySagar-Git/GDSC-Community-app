@@ -1,38 +1,68 @@
-import React from "react";
-import { View, FlatList, TouchableOpacity } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, FlatList, TouchableOpacity, Text, Image } from "react-native";
 import { useRouter } from "expo-router";
-import { H1, Muted } from "@/components/ui/typography";
-
-const events = [
-  { id: "1", title: "GDSC Meeting", date: "2024-09-15" },
-  { id: "2", title: "Web Development Workshop", date: "2024-09-22" },
-  { id: "3", title: "Mobile App Hackathon", date: "2024-10-05" },
-];
+import { Muted } from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
+import { getUpcomingEvents, getPastEvents } from "@/actions/events";
 
 interface Event {
-  id: string;
-  title: string;
-  date: string;
+  _id: string;
+  isPast?: boolean;
+  name: string;
+  description: string;
+  startDate: string;
+  endDate?: string;
+  venue?: string;
+  image?: string
 }
 
 export default function Events() {
+  const [showUpcoming, setShowUpcoming] = useState(true);
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [pastEvents, setPastEvents] = useState([]);
   const router = useRouter();
 
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const upcoming = await getUpcomingEvents();
+      const past = await getPastEvents();
+      setUpcomingEvents(upcoming);
+      setPastEvents(past);
+    };
+    fetchEvents();
+  }, []);
+
   const handlePress = (event: Event) => {
-    router.push(`/events/${event.id}`);
+    router.push(`/events/${event._id}`);
   };
 
   return (
     <View className="flex-1 bg-background p-4">
-      <H1 className="mb-4">Upcoming Events</H1>
+      <View className="flex-row justify-around mb-4">
+        <Button
+          variant={showUpcoming ? "secondary" : "outline"}
+          onPress={() => setShowUpcoming(true)}
+        >
+          <Text>Upcoming Events</Text>
+        </Button>
+        <Button variant={!showUpcoming ? "secondary" : "outline"} onPress={() => setShowUpcoming(false)}>
+          <Text>Past Events</Text>
+        </Button>
+      </View>
       <FlatList
-        data={events}
-        keyExtractor={(item) => item.id}
+        data={showUpcoming ? upcomingEvents : pastEvents}
+        keyExtractor={(item: Event) => item._id}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => handlePress(item)}>
-            <View className="mb-4 p-4 bg-card rounded-lg">
-              <Muted className="text-lg font-semibold">{item.title}</Muted>
-              <Muted>{item.date}</Muted>
+            <View className="mb-4 p-4 bg-card rounded-lg shadow-sm">
+              {item.image && (
+                <Image
+                  source={{ uri: item.image }}
+                  style={{ width: "100%", height: 200, borderRadius: 8, resizeMode: "cover" }}
+                />
+              )}
+              <Muted className="text-lg font-semibold">{item?.name}</Muted>
+              <Muted>{item?.startDate}</Muted>
             </View>
           </TouchableOpacity>
         )}
