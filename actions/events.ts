@@ -36,7 +36,7 @@ export const getUpcomingEvents = async () => {
     return [];
   }
 
-  return data;
+  return data as Event[];
 };
 
 export const getPastEvents = async () => {
@@ -52,5 +52,20 @@ export const getPastEvents = async () => {
     return [];
   }
 
-  return data;
+  return data as Event[];
+};
+
+export const getEventById = async (id: string) => {
+  const { data, error } = await supabase
+    .from("events")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.error("Error fetching event by id:", error);
+    return null;
+  }
+
+  return data as Event;
 };

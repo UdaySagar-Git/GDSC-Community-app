@@ -7,6 +7,7 @@ import { getUpcomingEvents, getPastEvents } from "@/actions/events";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "@/components/Loader";
 import { Event } from "@/actions/events";
+import dayjs from "dayjs";
 
 export default function Events() {
   const [showUpcoming, setShowUpcoming] = useState(true);
@@ -29,14 +30,19 @@ export default function Events() {
 
   return (
     <View className="flex-1 bg-background p-4">
-      <View className="flex-row justify-around mb-4">
+      <View className="flex-row justify-around mb-4 gap-4">
         <Button
+          className="w-1/2"
           variant={showUpcoming ? "secondary" : "outline"}
           onPress={() => setShowUpcoming(true)}
         >
           <Text>Upcoming Events</Text>
         </Button>
-        <Button variant={!showUpcoming ? "secondary" : "outline"} onPress={() => setShowUpcoming(false)}>
+        <Button
+          className="w-1/2"
+          variant={!showUpcoming ? "secondary" : "outline"}
+          onPress={() => setShowUpcoming(false)}
+        >
           <Text>Past Events</Text>
         </Button>
       </View>
@@ -55,7 +61,7 @@ export default function Events() {
                     />
                   )}
                   <Muted className="text-lg font-semibold">{item?.name}</Muted>
-                  <Muted>{item?.startDate}</Muted>
+                  <Muted>{item?.startDate ? dayjs(item?.startDate).format("MMM D, YYYY") : "To be announced"}</Muted>
                 </View>
               </TouchableOpacity>
             )}
