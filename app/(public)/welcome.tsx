@@ -31,7 +31,7 @@ export default function WelcomeScreen() {
 			>
 				<View className="flex flex-col gap-y-4 mb-4">
 					<Button
-						className="w-full"
+						className="w-full dark:bg-white dark:text-background dark:border-gray-200"
 						size="lg"
 						variant="outline"
 						onPress={() => router.push("/sign-in")}
@@ -39,7 +39,7 @@ export default function WelcomeScreen() {
 						<Text className="text-lg font-semibold text-gray-700">Sign In</Text>
 					</Button>
 					<Button
-						className="w-full"
+						className="w-full dark:bg-secondary-foreground dark:text-background"
 						size="lg"
 						variant="secondary"
 						onPress={() => router.push("/sign-up")}
