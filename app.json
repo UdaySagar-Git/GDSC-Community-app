@@ -25,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/gdsc-logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.udaysagar.GDSC"
     },
     "experiments": {
       "typedRoutes": true
@@ -34,6 +35,14 @@
       "expo-router",
       "expo-secure-store",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "44f0b91d-c205-4e90-8609-1bd2fe131cad"
+      }
+    }
   }
 }
