@@ -103,6 +103,10 @@ export default function ProtectedLayout() {
 				href: null,
 				headerTitle: "Forum Details",
 			}} />
+			<Tabs.Screen name="domains/[domain_slug]" options={{
+				href: null,
+				headerTitle: "Details"
+			}} />
 		</Tabs>
 	);
 }

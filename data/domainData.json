@@ -1,0 +1,186 @@
+[
+  {
+    "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/domains/1.gif",
+    "title": "Web Development",
+    "description": "Focuses on empowering students to build responsive, user-friendly websites and web applications using modern web technologies and frameworks.",
+    "slug": "web-development",
+    "members": [
+      {
+        "name": "Sai Jahnavi",
+        "role": "Web Development Lead",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/SaiJahnaviRallapalli.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Sri Manikanta",
+        "role": "Web Development Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Manikanta.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Karthik",
+        "role": "Web Development Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Karthik.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Lakshita",
+        "role": "Web Development Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/LakshitaGoyal.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      }
+    ]
+  },
+  {
+    "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/domains/2.gif",
+    "title": "Competitive Programming",
+    "description": "Cultivates competitive programming skills, encouraging students to hone their algorithmic problem-solving abilities, participate in coding competitions, and develop efficient solutions to real-world challenges.",
+    "slug": "competitive-programming",
+    "members": [
+      {
+        "name": "Harsha Vardhan",
+        "role": "Competitive Programming Lead",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/HarshaVardhan.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Divya Sri",
+        "role": "Competitive Programming Volunteer",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/DivyaSri.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Vighnesh",
+        "role": "Competitive Programming Volunteer",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/VighneshVangari.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      }
+    ]
+  },
+  {
+    "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/domains/3.gif",
+    "title": "Machine Learning",
+    "description": "Immerses students in the intricacies of Machine Learning, motivating them to delve into and apply sophisticated algorithms, conduct data analysis, and create predictive models to address intricate problems.",
+    "slug": "machine-learning",
+    "members": [
+      {
+        "name": "Surya Teja",
+        "role": "Machine Learning Lead",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/ChittiproluSuryateja.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Roshini",
+        "role": "Machine Learning Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/KotagiriRoshini.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Keerthika",
+        "role": "Machine Learning Volunteer",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/KeerthikaGoli.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Bharath Chandra",
+        "role": "Machine Learning Volunteer",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/BharathChandra.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      }
+    ]
+  },
+  {
+    "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/domains/4.gif",
+    "title": "Management",
+    "description": "Provides students with leadership and organizational skills, fostering a community that not only excels in technical expertise but also effectively manages projects, events, and teams.",
+    "slug": "management",
+    "members": [
+      {
+        "name": "Sai Rakshita",
+        "role": "Management Lead",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/SaiRakshitaNarsingh.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Abhijeet",
+        "role": "Management Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Abhijeet.png",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Sri Kruthi",
+        "role": "Management Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/SriKruthi.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Harika",
+        "role": "Management Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Harika.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      }
+    ]
+  },
+  {
+    "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/domains/5.gif",
+    "title": "Design",
+    "description": "Engages students in learning and applying best practices to secure digital systems, prevent cyber threats, and promote online safety.",
+    "slug": "design",
+    "members": [
+      {
+        "name": "Siddeshwari",
+        "role": "Design Lead",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Siddeshwari_Adepu.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Ch.Anirudh",
+        "role": "Design Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/Anirudh.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      },
+      {
+        "name": "Arya Joshi",
+        "role": "Design Coordinator",
+        "image": "https://xtubyktohcpkgpywfast.supabase.co/storage/v1/object/public/images/members/AryaJoshi.jpg",
+        "linkedin": null,
+        "github": null,
+        "instagram": null
+      }
+    ]
+  }
+]
